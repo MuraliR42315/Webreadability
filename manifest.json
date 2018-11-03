@@ -1,0 +1,26 @@
+{
+"manifest_version":2,
+"name":"Readability Measure",
+"description":"To measure the readability of the document and to simplify the text",
+"version":"1",
+"author": "Muralidhar",
+"browser_action":{
+"title":"Simplify text Content",
+"default_popup":"popup.html"},
+
+"background":{
+"scripts":["background.js"]
+},
+
+"content_scripts":[{
+"matches":[
+	"<all_urls>"
+],
+"js":["content.js"]
+}],
+"permissions":["tabs","contextMenus", "<all_urls>","storage"]
+
+
+}
+
+
